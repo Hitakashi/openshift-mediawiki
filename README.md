@@ -8,18 +8,24 @@ applications.  To use, just follow the quickstart below.
 Quickstart
 ==========
 
-1) Create an account at https://www.openshift.com
-2) Create a php application with mysql:
-    $ rhc app create mediawiki php-5.3 mysql-5.1 
-3) Add this upstream mediawiki repo
+1. Create an account at https://www.openshift.com
+2. Create a php application with mysql:
+    ```bash
+    $ rhc app create mediawiki php-5.4 mysql-5.5
+    ```
+3. Add this upstream mediawiki repo
+    ```bash
     $ cd mediawiki
     $ git remote add upstream -m master git://github.com/openshift-quickstart/mediawiki-example.git
     $ git pull -s recursive -X theirs upstream master
-4) Then push the repo upstream
+    ```
+4. Then push the repo upstream
+    ```bash
     $ git push
-5) That's it, you can now checkout your application at:
+    ```
+5. That's it, you can now checkout your application at:
     http://mediawiki-$yourlogin.rhcloud.com
-6) Default Admin Username: Admin
+6. Default Admin Username: Admin
    Default Password: OpenShiftAdmin
 
 Updates
@@ -28,21 +34,25 @@ Updates
 In order to update or upgrade to the latest mediawiki, you'll need to re-pull
 and re-push.
 
-1) Pull from upstream:
+1. Pull from upstream:
+    ```bash
     $ cd mediawiki/
     $ git pull -s recursive -X theirs upstream master
-2) Push the new changes upstream
+    ```
+2. Push the new changes upstream
+    ```bash
     $ git push
+    ```
 
 
 Repo layout
 ===========
-php/ - Externally exposed php code goes here
-libs/ - Additional libraries
-misc/ - For not-externally exposed php code
-../data - For persistent data
-.openshift/pear.txt - list of pears to install
-.openshift/action_hooks/build - Script that gets run every push, just prior to
+`php/` - Externally exposed php code goes here
+`libs/` - Additional libraries
+`misc/` - For not-externally exposed php code
+`../data` - For persistent data
+`.openshift/pear.txt` - list of pears to install
+`.openshift/action_hooks/build` - Script that gets run every push, just prior to
     starting your app
 
 
