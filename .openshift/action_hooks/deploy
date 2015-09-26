@@ -73,7 +73,7 @@ fi
 
 if [[ ! -d ${OPENSHIFT_REPO_DIR}/php ]]
 then
-    rm -f mkdir ${OPENSHIFT_REPO_DIR}/php
+    rm -f ${OPENSHIFT_REPO_DIR}/php
     mkdir ${OPENSHIFT_REPO_DIR}/php
 fi
 
