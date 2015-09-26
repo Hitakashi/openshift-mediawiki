@@ -41,8 +41,8 @@ then
     echo
     echo "done."
     echo "=================================================="
-    echo "  Wiki-Admin login: admin"
-    echo "  Wiki-Admin password: OpenShiftAdmin"
+    echo "  Mediawiki-Admin login: admin"
+    echo "  Mediawiki-Admin password: OpenShiftAdmin"
     echo "  Don't forget to change your wiki admin password!"
     echo "=================================================="
 else
